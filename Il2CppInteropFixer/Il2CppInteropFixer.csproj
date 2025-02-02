@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Preloader.Core" Version="6.0.0-pre.1" />
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.733"/>
+
+        <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" PrivateAssets="all"/>
+    </ItemGroup>
+
+    <Target Name="Copy" AfterTargets="Build" Condition="'$(Uno)' != ''">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(Uno)\BepInEx\patchers" UseSymboliclinksIfPossible="true" />
+    </Target>
+
+</Project>
