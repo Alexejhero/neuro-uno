@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="VedalAI.NeuroSdk.Unity" Version="0.1.3.6-test" />
+        <PackageReference Include="VedalAI.NeuroSdk.Unity" Version="2.0.0-dev.3" />
         <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.733" />
         <Reference Include="$(Uno)\BepInEx\interop\*" />
         

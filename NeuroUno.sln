@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuroUno", "NeuroUno\NeuroUno.csproj", "{8770FA5E-3A58-426A-9589-414462CE5239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Il2CppInteropFixer", "Il2CppInteropFixer\Il2CppInteropFixer.csproj", "{0DF77619-EC0B-4E49-9334-7EA5CD528099}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BepInExUnoSupport", "BepInExUnoSupport\BepInExUnoSupport.csproj", "{0DF77619-EC0B-4E49-9334-7EA5CD528099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,14 +10,15 @@ namespace Il2CppInteropFixer;
 [UsedImplicitly]
 public sealed class Patcher : BasePatcher
 {
-    private const string Id = "Il2CppInteropFixer";
+    private const string Id = "BepInExUnoSupport";
 
-    internal static ManualLogSource Logger;
+    internal static ManualLogSource Logger = null!;
 
     public override void Initialize()
     {
         Logger = Log;
 
+        NewtonsoftJsonLoader.Load();
         Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), Id);
     }
 }
