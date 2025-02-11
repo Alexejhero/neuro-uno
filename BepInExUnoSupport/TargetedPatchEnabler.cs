@@ -2,10 +2,10 @@
 using HarmonyLib;
 using JetBrains.Annotations;
 
-namespace Il2CppInteropFixer;
+namespace BepInExUnoSupport;
 
 [HarmonyPatch]
-public static class TargetedPatchEnabler
+internal static class TargetedPatchEnabler
 {
     [HarmonyTargetMethods, UsedImplicitly]
     private static IEnumerable<MethodInfo> TargetMethods() => Enumerable.Select(

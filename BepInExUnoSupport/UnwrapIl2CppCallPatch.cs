@@ -3,7 +3,7 @@ using HarmonyLib;
 using Il2CppInterop.Common.XrefScans;
 using JetBrains.Annotations;
 
-namespace Il2CppInteropFixer;
+namespace BepInExUnoSupport;
 
 [HarmonyPatch]
 internal static class UnwrapIl2CppCallPatch

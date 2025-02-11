@@ -4,7 +4,7 @@ using BepInEx.Preloader.Core.Patching;
 using HarmonyLib;
 using JetBrains.Annotations;
 
-namespace Il2CppInteropFixer;
+namespace BepInExUnoSupport;
 
 [PatcherPluginInfo(Id, Id, "1.0.0")]
 [UsedImplicitly]

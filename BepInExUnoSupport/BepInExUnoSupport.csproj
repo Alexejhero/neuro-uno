@@ -5,7 +5,6 @@
         <LangVersion>preview</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Il2CppInteropFixer</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +13,7 @@
 
         <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" PrivateAssets="all"/>
     </ItemGroup>
-    
+
     <ItemGroup>
         <EmbeddedResource Include="Resources\**" />
     </ItemGroup>

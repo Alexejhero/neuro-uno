@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.Loader;
 
-namespace Il2CppInteropFixer;
+namespace BepInExUnoSupport;
 
 internal static class NewtonsoftJsonLoader
 {
@@ -12,8 +12,7 @@ internal static class NewtonsoftJsonLoader
         byte[]? buffer = GetEmbeddedBytes("Newtonsoft.Json.dll", false);
         if (buffer == null) return;
 
-        Assembly assembly = AssemblyLoadContext.Default.LoadFromStream(new MemoryStream(buffer));
-        Console.WriteLine(AppDomain.CurrentDomain.GetHashCode() + " " + assembly.GetName().Version + " " + assembly.Location);
+        AssemblyLoadContext.Default.LoadFromStream(new MemoryStream(buffer));
 
         Console.WriteLine("Loaded embedded assembly Newtonsoft.Json.dll");
     }
