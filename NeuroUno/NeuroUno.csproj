@@ -5,13 +5,14 @@
         <LangVersion>preview</LangVersion>
         <Nullable>enable</Nullable>
 
-        <NoWarn>$(NoWarn);MSB3246</NoWarn>
+        <DebugType>embedded</DebugType>
+        <DebugSymbols>true</DebugSymbols>
 
-        <HasUnityReference>true</HasUnityReference>
+        <NoWarn>$(NoWarn);MSB3246</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="VedalAI.NeuroSdk.Unity" Version="2.0.0-dev.3" />
+        <PackageReference Include="VedalAI.NeuroSdk.Unity" Version="2.0.0-pre.2" />
         <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.733" />
         <Reference Include="$(Uno)\BepInEx\interop\*" />
 

@@ -1,7 +1,11 @@
+using System.Reflection;
 using BepInEx;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 using NeuroSdk;
+using NeuroSdk.Actions;
+using NeuroSdk.Il2Cpp;
+using NeuroUno.Actions;
 using UnityEngine;
 
 namespace NeuroUno;
@@ -13,5 +17,24 @@ public sealed partial class Plugin : BasePlugin
     {
         Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), Id);
         NeuroSdkSetup.Initialize("Uno");
+
+        AddComponent<test>();
+    }
+}
+
+[RegisterInIl2Cpp]
+public class test : MonoBehaviour
+{
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            NeuroActionHandler.RegisterActions(new PlayCardAction(), new CallUnoAction());
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            NeuroActionHandler.UnregisterActions(new PlayCardAction(), new CallUnoAction());
+        }
     }
 }
